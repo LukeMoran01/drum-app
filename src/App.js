@@ -100,7 +100,7 @@ function DrumPad({ audioclip, hotkey, padPressed}) {
 
 const hotkeys = ["Q", "W", "E", "A", "S", "D", "Z", "X", "C"];
 const tracks = [
-  "drum-app/audio/Heater-1.mp3",
+  "./audio/Heater-1.mp3",
   "drum-app/audio/Heater-2.mp3",
   "drum-app/audio/Heater-3.mp3",
   "drum-app/audio/Heater-4_1.mp3",
