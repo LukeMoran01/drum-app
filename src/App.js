@@ -19,7 +19,16 @@ function DrumMachine() {
     if (!playback.paused) {
       playback.currentTime = 0;
     } else {
-      playback.play()
+      var playPromise = playback.play()
+      if (playPromise !== undefined) {
+        playPromise.then( () => {
+        }).catch((error) => {
+          console.log(error);
+          console.log("try to reload")
+          playback.load();
+          playback.play();
+        })
+      }
     }
   }
 
@@ -81,26 +90,27 @@ function Display({ clip }) {
   )
 }
 
-function DrumPad({ audioclip, hotkey, padPressed, keypress }) {
+function DrumPad({ audioclip, hotkey, padPressed}) {
   const audioName = getName(audioclip)
 
   return (
-    <button onClick={() => padPressed(hotkey, audioName)} id={audioName} className="drum-pad">{hotkey}<audio id={hotkey} className="clip" src={audioclip}></audio></button>
+    <button onClick={() => padPressed(hotkey, audioName)} id={audioName} className="drum-pad">{hotkey}<audio crossOrigin="anonymous" id={hotkey} className="clip" src={audioclip}></audio></button>
   )
 }
 
 const hotkeys = ["Q", "W", "E", "A", "S", "D", "Z", "X", "C"];
 const tracks = [
-  "/audio/Heater-1.mp3",
-  "/audio/Heater-2.mp3",
-  "/audio/Heater-3.mp3",
-  "/audio/Heater-4_1.mp3",
-  "/audio/Heater-6.mp3",
-  "/audio/Cev_H2.mp3",
-  "/audio/Kick_n_Hat.mp3",
-  "/audio/RP4_KICK_1.mp3",
-  "/audio/Dsc_Oh.mp3"
+  "drum-app/audio/Heater-1.mp3",
+  "drum-app/audio/Heater-2.mp3",
+  "drum-app/audio/Heater-3.mp3",
+  "drum-app/audio/Heater-4_1.mp3",
+  "drum-app/audio/Heater-6.mp3",
+  "drum-app/audio/Cev_H2.mp3",
+  "drum-app/audio/Kick_n_Hat.mp3",
+  "drum-app/audio/RP4_KICK_1.mp3",
+  "drum-app/audio/Dsc_Oh.mp3"
 ]
+
 
 function getName(audioPath) {
   return audioPath.split('/').pop().slice(0, -4);
