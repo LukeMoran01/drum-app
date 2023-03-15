@@ -114,6 +114,7 @@ const tracks = [
 
 function getName(audioPath) {
   return audioPath.split('/').pop().slice(0, -4);
+  
 }
 
 export default DrumMachine;
