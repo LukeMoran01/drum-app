@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function DrumMachine() {
@@ -81,7 +81,7 @@ function Display({ clip }) {
   )
 }
 
-function DrumPad({ audioclip, hotkey, padPressed, keypress}) {
+function DrumPad({ audioclip, hotkey, padPressed, keypress }) {
   const audioName = getName(audioclip)
 
   return (
