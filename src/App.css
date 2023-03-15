@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.drum-machine {
+  height: 275px;
+  width: 520px;
+  position: absolute;
+  top:0;bottom:0;left:0;right:0;
+  background-color: goldenrod;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.pads {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 1px;
+  height: 100%;
+  min-width: 60%;
+  padding: 8px 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.drum-pad {
+  height: 75px;
+  width: 85px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+}
+
+.drum-pad:active, .active {
+  background-color: goldenrod;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+}
+
+#display {
+  height: 50px;
+  width: 100px;
+  margin: auto;
+  position: relative;
+  margin-top: 30%;
+  background-color: aliceblue;
+
+  text-align: center;
+  line-height: 49px;
+}
+
+.tools {
+  background-color: black;
+  height: 100%;
+  width: 100%;
 }
