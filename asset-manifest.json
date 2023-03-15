@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/drum-app/static/css/main.332f75f6.css",
+    "main.js": "/drum-app/static/js/main.61f97cb6.js",
+    "static/js/787.e09b6fe3.chunk.js": "/drum-app/static/js/787.e09b6fe3.chunk.js",
+    "index.html": "/drum-app/index.html",
+    "main.332f75f6.css.map": "/drum-app/static/css/main.332f75f6.css.map",
+    "main.61f97cb6.js.map": "/drum-app/static/js/main.61f97cb6.js.map",
+    "787.e09b6fe3.chunk.js.map": "/drum-app/static/js/787.e09b6fe3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.332f75f6.css",
+    "static/js/main.61f97cb6.js"
+  ]
+}
